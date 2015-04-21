@@ -13,6 +13,7 @@ public class Child4 extends Parent {
 	}
 
 	@Override
+
 	public String methodA() {
 		return "method A in Child4";
 	}
