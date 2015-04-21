@@ -30,7 +30,7 @@ public class Main {
 		Constellation constellation[] = { ohituzi_za, ousi_za, hutago_za,
 				kani_za, sisi_za, otome_za, tenbin_za, sasori_za, ite_za,
 				yagi_za, mizugame_za, uo_za };
-
+//
 		for (int i = 0; i <= constellation.length; i++) {
 			if ((int_month == constellation[i].getStart_month() && int_day >= constellation[i]
 					.getEnd_day())
