@@ -2,24 +2,22 @@
  *
  */
 package jp.co.sevenandinm.kenshuu2015.seven006;
-
 /**
- * 牡牛座
+ * 水瓶座
  * @author teacher4
  *
  */
-public class Taurus extends Constellation {
-
-	public Taurus(){
+public class Aquarius extends Constellation {
+	public Aquarius(){
 		init();
 	}
 
 	private void init() {
 		// TODO 自動生成されたメソッド・スタブ
-		this.setJapaneseName("牡牛座");
-		this.setStartMonth(4);
+		this.setJapaneseName("水瓶座");
+		this.setStartMonth(1);
 		this.setStartDay(20);
-		this.setEndMonth(5);
-		this.setEndDay(20);
+		this.setEndMonth(2);
+		this.setEndDay(18);
 	}
 }

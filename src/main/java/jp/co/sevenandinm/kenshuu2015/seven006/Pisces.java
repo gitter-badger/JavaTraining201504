@@ -4,22 +4,20 @@
 package jp.co.sevenandinm.kenshuu2015.seven006;
 
 /**
- * 牡牛座
  * @author teacher4
  *
  */
-public class Taurus extends Constellation {
-
-	public Taurus(){
+public class Pisces extends Constellation {
+	public Pisces(){
 		init();
 	}
 
 	private void init() {
 		// TODO 自動生成されたメソッド・スタブ
-		this.setJapaneseName("牡牛座");
-		this.setStartMonth(4);
-		this.setStartDay(20);
-		this.setEndMonth(5);
+		this.setJapaneseName("魚座");
+		this.setStartMonth(2);
+		this.setStartDay(19);
+		this.setEndMonth(3);
 		this.setEndDay(20);
 	}
 }
