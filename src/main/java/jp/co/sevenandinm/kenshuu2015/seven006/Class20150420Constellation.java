@@ -1,4 +1,5 @@
 package jp.co.sevenandinm.kenshuu2015.seven006;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -17,8 +18,11 @@ public class Class20150420Constellation {
 		System.out.print("日：");
 		int day = scan.nextInt();
 		star(month,day);
-
-		methodB(year , month , day);
+		int totalDay= totalDay(year , month , day);
+		System.out.println(totalDay/365+"才");
+		System.out.println("\n生まれてから今日まで" +totalDay+"日たちました");
+		String eto=eto(year);
+		System.out.println(eto+"年です");
 
 	}
 
@@ -46,35 +50,18 @@ public class Class20150420Constellation {
 			){
 				System.out.println(constellation[i].getJapaneseName());
 			}
-
 		}
 
 	}
-	public static void methodB(int year ,int month,int day){
-		/*
-		Class20150421Today today = new Class20150421Today();
-		Class20150421Today inputday = new Class20150421Today(year,month,day);
-
-		int yy = year;
-		int mm = month;
-		int dd = day;
-		int todayYear = today.getTodayYear();
-		int todayMonth = today.getTodayMonth();
-		int todayDay = today.getTodayDay();
-		int totalDay=0;
-
-		System.out.println("あなたは"+totalDay+"才");
+	public static int totalDay(int year ,int month,int day){
 		Calendar calendar = Calendar.getInstance();
-		calendar.set(2006, 4, 14);
-*/
+		int todayYear= calendar.get(Calendar.YEAR);
+		int todayMonth =calendar.get(Calendar.MONTH) +1;
+		int todayDay = calendar.get(Calendar.DATE);
 		int yy =year;
 		int mm =month;
 		int dd =day;
-		int todayYear =2015;
-		int todayMonth =4;
-		int todayDay = 21;
 		int totalDay =0;
-
 
 		HashMap<Integer,Integer> hm= new HashMap<Integer,Integer>();
 		hm.put(1,31);
@@ -90,12 +77,7 @@ public class Class20150420Constellation {
 		hm.put(11,30);
 		hm.put(12,31);
 
-
-
-		//getInputDayYear() getInputDayMonth() getInputDayDay()
-
-
-		while(true){
+		while( !(todayYear==yy && todayMonth == mm && todayDay== dd )){
 			dd++;
 			totalDay++;
 			if( dd > hm.get(mm)){
@@ -109,18 +91,20 @@ public class Class20150420Constellation {
 				if (yy%4==0 && yy%100!=0 || yy%400==0){
 					hm.put(2,29);
 				}
-
 				else{
 					hm.put(2, 28);
 				}
-
-			}
-			if((todayYear==yy) && (todayMonth == mm) && (todayDay== dd)){
-				break;
 			}
 		}
-
-		System.out.println("\n経過日数は" +totalDay);
-		System.out.println(totalDay/365+"才");
+		return totalDay;
 	}
+
+	public static String eto(int year){
+		String eto="";
+		String[] etoBox ={"子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"};
+		int etonum=(year+9)%12;
+		return etoBox[etonum-1];
+	}
+
+
 }
