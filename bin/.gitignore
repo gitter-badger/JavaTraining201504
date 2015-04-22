@@ -4,3 +4,8 @@
 .classpath
 /.settings/*
 /target
+/.gitignore
+/.settings
+/README.md
+/pom.xml
+/src
