@@ -19,8 +19,8 @@ public class Class20150420Constellation {
 		int day = scan.nextInt();
 		star(month,day);
 		int totalDay= totalDay(year , month , day);
-		System.out.println(totalDay/365+"才");
-		System.out.println("\n生まれてから今日まで" +totalDay+"日たちました");
+		System.out.println(totalDay+"才");
+		//System.out.println("\n生まれてから今日まで" +totalDay+"日たちました");
 		String eto=eto(year);
 		System.out.println(eto+"年です");
 
@@ -62,6 +62,7 @@ public class Class20150420Constellation {
 		int mm =month;
 		int dd =day;
 		int totalDay =0;
+		int age=0;
 
 		HashMap<Integer,Integer> hm= new HashMap<Integer,Integer>();
 		hm.put(1,31);
@@ -84,6 +85,9 @@ public class Class20150420Constellation {
 				mm++;
 				dd=1;
 			}
+			if(month ==mm && day==dd){
+				age++;
+			}
 			if(mm>12){
 				yy++;
 				mm=1;
@@ -94,13 +98,13 @@ public class Class20150420Constellation {
 				else{
 					hm.put(2, 28);
 				}
+
 			}
 		}
-		return totalDay;
+		return age;
 	}
 
 	public static String eto(int year){
-		String eto="";
 		String[] etoBox ={"子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"};
 		int etonum=(year+9)%12;
 		return etoBox[etonum-1];
