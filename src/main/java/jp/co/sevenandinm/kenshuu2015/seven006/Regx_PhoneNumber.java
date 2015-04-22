@@ -24,7 +24,10 @@ public class Regx_PhoneNumber{
 
 	}
 	public static boolean excude(String str){
-		return str.matches("[0-9][0-9]-[0-9]{4}-[0-9]{4}|[0-9]{4}-[0-9]{2}-[0-9]{4}|[0-9]{3}-[0-9]{3}-[0-9]{4}");
+		String tel244="[0-9]{2}-[0-9]{4}-[0-9]{4}|";
+		String tel424="[0-9]{4}-[0-9]{2}-[0-9]{4}|";
+		String tel334="[0-9]{3}-[0-9]{3}-[0-9]{4}";
+		return str.matches(tel244+tel424+tel334);
 	}
 	public static void  dispOut(boolean flag){
 		if(flag){
