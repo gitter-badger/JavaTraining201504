@@ -60,36 +60,44 @@ public class Main {
 		birthDay.set(int_year, int_month, int_day);
 		int age = now.get(Calendar.YEAR) - birthDay.get(Calendar.YEAR);
 
-		if (now.get(Calendar.MONTH) == birthDay.get(Calendar.MONTH)){
+		if (now.get(Calendar.MONTH) == birthDay.get(Calendar.MONTH)) {
 
-			age = age - 1;
+		} else if (now.get(Calendar.MONTH) < birthDay.get(Calendar.MONTH)) {
+			{
 
-		} else if (now.get(Calendar.MONTH) < birthDay.get(Calendar.MONTH)) { {
+				if (now.get(Calendar.DAY_OF_MONTH) < birthDay
+						.get(Calendar.DAY_OF_MONTH)) {
+					age = age - 1;
 
-			if (now.get(Calendar.DAY_OF_MONTH) < birthDay.get(Calendar.DAY_OF_MONTH)) {
-				age = age - 1;
+				}
+			}
+			if (age > 0) {
+				System.out.println(age);
+			} else if (age == 0) {
+				System.out.println("0");
+			} else {
+				System.out.println("生まれてない");
 
 			}
+
 		}
-		if (age > 0) {
-			System.out.println(age);
-		} else if(age == 0){
-			System.out.println("0");
-		}else{
-			System.out.println("生まれてない");
-
-
-
-	}
-
-
-
-
-	}
 		return age;
 	}
-}
 
+	private int getNum_day(int int_year, int int_month, int int_day) {
+		Calendar calendarNow = Calendar.getInstance();
+		calendarNow.set(calendarNow.get(Calendar.YEAR),
+				calendarNow.get(Calendar.MONTH) + 1,
+				calendarNow.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
+		Calendar calendarPast = Calendar.getInstance();
+		calendarPast.set(2014, 2, 15, 0, 0, 0);
+		long diffTime = calendarNow.getTimeInMillis()
+				- calendarPast.getTimeInMillis();
+		long pastDays = diffTime / (1000 * 60 * 60 * 24);
+		return 0;
+	}
+
+}
 
 // my.execute01();
 // my.execute02();
