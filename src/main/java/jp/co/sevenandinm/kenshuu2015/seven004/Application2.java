@@ -8,7 +8,6 @@ public class Application2{
 
 
 
-	System.out.println("生年月日を入力して下さい");
 
 	Scanner stdIn = new Scanner(System.in);
 
@@ -45,17 +44,17 @@ public class Application2{
         }
         }
      //年齢を求める
-	 int nenrei;
-	 nenrei=2015-nen;
-	 System.out.println("年齢は"+nenrei+"歳です。");
+	  Birthday b=new Birthday(nen,tsuki,hi);
+
 
 
 	 //生まれてから今日までの日数を求める
-	 /*SimpleDateFormat date1=new SimpleDateFormat("yyyyMMdd");
+	/* SimpleDateFormat date1=new SimpleDateFormat("yyyyMMdd");
 	 System.out.println("今日の日付："+date1);*/
 
+
 	 int umaretekara;
-	 umaretekara= nenrei*365;
+	 umaretekara= nen*365;
 	 System.out.println("生まれてから今日まで"+umaretekara+"日が経過しています。");
 
 	 //干支を求める
