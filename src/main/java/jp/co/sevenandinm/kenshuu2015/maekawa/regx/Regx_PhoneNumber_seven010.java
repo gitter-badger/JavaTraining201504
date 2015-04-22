@@ -9,7 +9,14 @@ public class Regx_PhoneNumber_seven010 extends Super_Regx_PhoneNumber {
 	@Override
 	public boolean execute(String input) {
 		// TODO 自動生成されたメソッド・スタブ
-		return false;
+		boolean isTelNo = false;
+		String  regex =   "(0\\d0-(\\d{4})-(\\d{4}))";
+				regex += "|(0(\\d{1})-(\\d{4})-(\\d{4}))";
+				regex += "|(0(\\d{2})-(\\d{3})-(\\d{4}))";
+				regex += "|(0(\\d{3})-(\\d{2})-(\\d{4}))";
+
+		isTelNo = input.matches(regex);
+		return isTelNo;
 	}
 
 }
