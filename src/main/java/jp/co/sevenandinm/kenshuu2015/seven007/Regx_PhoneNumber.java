@@ -17,11 +17,15 @@ public class Regx_PhoneNumber {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 
-		System.out.println("電話番号を入力してください(**-****-****)");
+		System.out.println("電話番号を入力してください(例 **-****-****)");
 		Scanner stdIn = new Scanner(System. in);
 		String put = stdIn.nextLine();
 		boolean dispOut = inputData(put);
-		System.out.println(dispOut);
+		if( dispOut == true){
+			System.out.println("入力された電話番号(" +put +")は正しいです");
+		}else{
+			System.out.println("入力された電話番号(" +put +")は不正です");
+		}
 	}
 
 
