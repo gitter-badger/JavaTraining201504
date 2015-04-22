@@ -1,7 +1,7 @@
 /**
  *
  */
-package jp.co.sevenandinm.kenshuu2015.seven006;
+package jp.co.sevenandinm.kenshuu2015.maekawa.astro;
 
 /**
  * 牡牛座
