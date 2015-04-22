@@ -126,7 +126,6 @@ public class Apps {
 
 	//生まれてから日数プログラム
 	private static int method04(int cal_year){
-
 		int days = cal_year * 365;
 		return days;
 	}
