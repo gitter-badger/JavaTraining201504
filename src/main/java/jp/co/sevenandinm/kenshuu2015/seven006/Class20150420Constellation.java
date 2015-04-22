@@ -105,11 +105,12 @@ public class Class20150420Constellation {
 			if(mm>12){
 				yy++;
 				mm=1;
-				if(yy%4==0 || yy%400==0 ){
+
+				if (yy%4==0 && yy%100!=0 || yy%400==0){
 					hm.put(2,29);
 				}
 
-				if(yy%4!=0 || yy%100==0){
+				else{
 					hm.put(2, 28);
 				}
 
