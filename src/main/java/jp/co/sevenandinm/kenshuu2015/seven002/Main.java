@@ -1,5 +1,6 @@
 package jp.co.sevenandinm.kenshuu2015.seven002;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Main {
@@ -11,8 +12,9 @@ public class Main {
 		System.out.println("生年月日を入力してください");
 
 		Scanner stdIn = new Scanner(System.in);
-		int int_day = stdIn.nextInt();
+		int int_year = stdIn.nextInt();
 		int int_month = stdIn.nextInt();
+		int int_day = stdIn.nextInt();
 
 		Ohituzi_za ohituzi_za = new Ohituzi_za();
 		Ousi_za ousi_za = new Ousi_za();
@@ -30,8 +32,8 @@ public class Main {
 		Constellation constellation[] = { ohituzi_za, ousi_za, hutago_za,
 				kani_za, sisi_za, otome_za, tenbin_za, sasori_za, ite_za,
 				yagi_za, mizugame_za, uo_za };
-//
-		for (int i = 0; i <= constellation.length; i++) {
+		//
+		for (int i = 0; i < constellation.length; i++) {
 			if ((int_month == constellation[i].getStart_month() && int_day >= constellation[i]
 					.getEnd_day())
 					|| (int_month == constellation[i].getEnd_month() && int_day <= constellation[i]
@@ -40,9 +42,55 @@ public class Main {
 				System.out.println(constellation[i].getJapanese_name());
 
 			}
+
 		}
+		// 十二支表示プロセス
+		String eto[] = { "子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌",
+				"亥" };
+		int i1 = (int_year + 8) % 12;
+		System.out.println(eto[i1]);
+
+		my.getAge(int_year, int_month, int_day);
+
+	}
+
+	private int getAge(int int_year, int int_month, int int_day) {
+		Calendar now = Calendar.getInstance();
+		Calendar birthDay = Calendar.getInstance();
+		birthDay.set(int_year, int_month, int_day);
+		int age = now.get(Calendar.YEAR) - birthDay.get(Calendar.YEAR);
+
+		if (now.get(Calendar.MONTH) == birthDay.get(Calendar.MONTH)){
+
+			age = age - 1;
+
+		} else if (now.get(Calendar.MONTH) < birthDay.get(Calendar.MONTH)) { {
+
+			if (now.get(Calendar.DAY_OF_MONTH) < birthDay.get(Calendar.DAY_OF_MONTH)) {
+				age = age - 1;
+
+			}
+		}
+		if (age > 0) {
+			System.out.println(age);
+		} else if(age == 0){
+			System.out.println("0");
+		}else{
+			System.out.println("生まれてない");
+
+
+
+	}
+
+
+
+
+	}
+		return age;
 	}
 }
+
+
 // my.execute01();
 // my.execute02();
 // my.execute03();
