@@ -29,7 +29,8 @@ public class Regx_PhoneNumber {
 
 	private boolean execute(String input) {
 	 boolean isTelNo = false;
-	 String regex = "[0-9]{2}-[0-9]{4}-[0-9]{4}";
+
+	 String regex = "[0-9]{2}-[0-9]{4}-[0-9]{4}|[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{4}-[0-9]{2}-[0-9]{4}|[0][8-9][0]-[0-9]{4}-[0-9]{4}";
 		isTelNo = input.matches(regex);
 	 return isTelNo;
 
