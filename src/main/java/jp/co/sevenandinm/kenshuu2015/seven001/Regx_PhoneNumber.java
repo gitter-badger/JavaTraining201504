@@ -30,7 +30,8 @@ public class Regx_PhoneNumber {
 //電話番号判定処理
 		private static boolean execute(String input){
 			boolean judge;
-			judge = input.matches("\\d{2}-\\d{4}-\\d{4}");
+//			judge = input.matches("\\d{2}-\\d{4}-\\d{4}");
+			judge = input.matches("0\\d{1,4}-\\d{1,4}-\\d{4}");
 			return judge;
 	}
 
