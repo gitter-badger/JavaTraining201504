@@ -3,21 +3,29 @@
  */
 package jp.co.sevenandinm.kenshuu2015.seven007;
 
-/**
- * @author newenployee7
- *
- */
+import java.util.Scanner;
+
+//メールアドレス判別プログラム
 public class Regx_Mail {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-
+		System.out.println("メールアドレスを入力してください。");
+		Scanner stdIn = new Scanner (System. in);
+		String inputData = stdIn.nextLine();
+		boolean check_out = dispOut(inputData);
+		if( check_out == true ){
+			System.out.println("入力されたメールアドレス（"+inputData+"）は有効です。");
+		}else
+			System.out.println("入力されたメールアドレス（"+inputData+"）は無効です。");
 	}
 
+	public static boolean dispOut(String adress){
+		boolean execute = adress.matches("[0-9a-zA-Z_.-]+@[0-9a-zA-Z_-]+(.[0-9a-zA-Z_-]+){1,2}");
+		return execute;
+	}
 }
+
+
 
 
 /*
