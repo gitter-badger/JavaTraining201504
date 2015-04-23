@@ -20,13 +20,13 @@ public class Zip_code {
 
 	private static java.lang.String inputData() {
 		// TODO 自動生成されたメソッド・スタブ
-		System.out.println("電話番号を入力してください");
+		System.out.println("郵便番号を入力してください");
 		Scanner stdIn = new Scanner(System.in);
 		String int_phonenum = stdIn.nextLine();
 		return int_phonenum;
 	}
 
-	private void dispOut(boolean flag) {
+	void dispOut(boolean flag) {
 		// TODO 自動生成されたメソッド・スタブ
 		if (flag) {
 			System.out.println(true);
@@ -35,8 +35,4 @@ public class Zip_code {
 		}
 	}
 
-	// String maches = ("^0\\d{1,2}-\\d{1,4}-\\d{4}$");
-
 }
-
-
