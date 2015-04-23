@@ -47,11 +47,9 @@ public class Application2{
 	  Birthday b=new Birthday(nen,tsuki,hi);
 
 
-
 	 //生まれてから今日までの日数を求める
 	/* SimpleDateFormat date1=new SimpleDateFormat("yyyyMMdd");
 	 System.out.println("今日の日付："+date1);*/
-
 
 	 int umaretekara;
 	 umaretekara= nen*365;

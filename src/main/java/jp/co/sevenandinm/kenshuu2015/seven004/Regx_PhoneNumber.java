@@ -23,7 +23,6 @@ public class Regx_PhoneNumber {
 	return flag;
 	}
 }
-
 /*Scannerで入力された文字が、電話番号であるかどうか判定し、
 あっていれば、「電話番号として正しいです。」
 間違っていれば、「電話番号ではありません」

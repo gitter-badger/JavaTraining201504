@@ -13,18 +13,22 @@ public class Birthday{
 	public void init(int nen,int tsuki,int hi){
 
 		Calendar today = Calendar.getInstance();//現在の時間を取得
-		int Year = today.get(Calendar.YEAR);
-		int Month = today.get(Calendar.MONTH) + 1;// JANUARYが0なので調整
-		int Date = today.get(Calendar.DATE);
+		int today_Year = today.get(Calendar.YEAR);
+		int today_Month = today.get(Calendar.MONTH) + 1;// JANUARYが0なので調整
+		int today_Date = today.get(Calendar.DATE);
 
 
-		int nenrei = Year - nen;
+		int nenrei = today_Year - nen;
 
-		if(Month < tsuki || Month == tsuki && Date < hi ){
-			nen--;//この条件では、まだ生まれていない。
+
+		if(today_Month < tsuki || today_Month == tsuki && today_Date < hi ){
+			nen--;
 		}
-		System.out.println("今日は:" + Year + "年" + Month + "月" + Date + "日です");
+
+		System.out.println("今日は:" + today_Year + "年" + today_Month + "月" + today_Date + "日です。");
 		System.out.print(nen + "年" + tsuki + "月" + hi + "日生まれの人の");
-		System.out.println("年齢は:" + nenrei + "才です");
+		System.out.println("年齢は:" + nenrei + "才です。");
+
+
 	}
 }
