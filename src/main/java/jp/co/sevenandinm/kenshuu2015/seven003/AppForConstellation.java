@@ -44,7 +44,7 @@ public class AppForConstellation {
 		for (int i =0; i < seiza.length ; i++){
 			if(int_ymd[1] == seiza[i].getStartMonth() && int_ymd[2] > seiza[i].getStartDay() ||
 					int_ymd[1] == seiza[i].getEndMonth() && int_ymd[2] < seiza[i].getEndDay() ) {
-				System.out.println("あなたの星座は" +  seiza[i].getJapaneseName() + "です。");
+				System.out.println("あなたの星座は◆" +  seiza[i].getJapaneseName() + "◆です。");
 		}
 			}
 
@@ -77,7 +77,6 @@ public class AppForConstellation {
 		mm = mm.replaceAll("Nov", "11");
 		mm = mm.replaceAll("Dec", "12");
 
-
 		int yyyy1 = Integer.parseInt(yyyy);
 		int mm1 = Integer.parseInt(mm);
 		int dd1 = Integer.parseInt(dd);
@@ -85,27 +84,26 @@ public class AppForConstellation {
 
 		if(int_ymd[1] > mm1 || int_ymd[1] == mm1 && int_ymd[2] > dd1){
 			int a = fin_year - 1;
-			System.out.println("あなたの年齢は" + a + "歳です。");
+			System.out.println("あなたの年齢は◆" + a + "歳◆です。");
 		}else{
-			System.out.println("あなたの年齢は" + fin_year + "歳です。");
+			System.out.println("あなたの年齢は◆" + fin_year + "歳◆です。");
 		}
-	}
-}
 
-
-	/*
 	//干支
 
 		char eto_a[] ={'申','酉','戌','亥','子','丑','寅','卯','辰','巳','午','未'};
 		int eto_b = int_ymd[0]%12;
 		char eto_c = eto_a[eto_b];
+		System.out.println("あなたの干支は◆"+ eto_c + "年◆です。");
 
+
+			/*
 			int keika;
 			keika =nenrei*365;
 				System.out.println("生まれてから" + keika + "日経過しています。");
-
-		 */
-
+			 */
+	}
+}
 
 
 
