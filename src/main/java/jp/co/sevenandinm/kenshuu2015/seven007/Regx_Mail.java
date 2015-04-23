@@ -20,7 +20,7 @@ public class Regx_Mail {
 	}
 
 	public static boolean dispOut(String adress){
-		boolean execute = adress.matches("[0-9a-zA-Z_.-]+@[0-9a-zA-Z_-]+(.[0-9a-zA-Z_-]+){1,2}");
+		boolean execute = adress.matches("[0-9a-zA-Z_\\.-]+@[0-9a-zA-Z_-]+(\\.[0-9a-zA-Z_-]+){1,2}");
 		return execute;
 	}
 }

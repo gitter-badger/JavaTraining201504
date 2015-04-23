@@ -21,7 +21,7 @@ public class Regx_PhoneNumber {
 	}
 
 	private static boolean inputData(String input){
-		boolean execute = input.matches("[0-9]{2,4}-[0-9]{3,4}-[0-9]{4}");
+		boolean execute = input.matches("[0-9]{2,4}-[0-9]{2,4}-[0-9]{4}");
 		return execute;
 	}
 }
