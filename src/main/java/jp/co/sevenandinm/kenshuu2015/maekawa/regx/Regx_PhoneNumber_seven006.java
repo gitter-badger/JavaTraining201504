@@ -8,11 +8,11 @@ public class Regx_PhoneNumber_seven006 extends Super_Regx_PhoneNumber {
 
 	@Override
 	public boolean execute(String input) {
-		// TODO 自動生成されたメソッド・スタブ
-		String tel244="[0-9]{2}-[0-9]{4}-[0-9]{4}|";
-		String tel424="[0-9]{4}-[0-9]{2}-[0-9]{4}|";
-		String tel334="[0-9]{3}-[0-9]{3}-[0-9]{4}";
-		return input.matches(tel244+tel424+tel334);
+		String tel244="^0\\d-\\d{4}-\\d{4}";
+		String tel424="^0\\d{3}-\\d{2}-\\d{4}";
+		String tel334="^0\\d{2}-\\d{3}-\\d{4}";
+		String telphone="^0\\d0-\\d{4}-\\d{4}";
+		return input.matches(tel244+"|"+tel424+"|"+tel334+"|"+telphone);
 	}
 
 }

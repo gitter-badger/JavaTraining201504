@@ -44,15 +44,15 @@ public class Check_Regx_PhoneNumber {
 	private void subExecute(String strTmp) {
 		// TODO 自動生成されたメソッド・スタブ
 		ArrayList<Super_Regx_PhoneNumber> logic_list = new ArrayList<Super_Regx_PhoneNumber>();
-//		logic_list.add(new Regx_PhoneNumber_seven001());
-//		logic_list.add(new Regx_PhoneNumber_seven002());
-//		logic_list.add(new Regx_PhoneNumber_seven003());
-//		logic_list.add(new Regx_PhoneNumber_seven004());
-//		logic_list.add(new Regx_PhoneNumber_seven005());
+		logic_list.add(new Regx_PhoneNumber_seven001());
+		logic_list.add(new Regx_PhoneNumber_seven002());
+		logic_list.add(new Regx_PhoneNumber_seven003());
+		logic_list.add(new Regx_PhoneNumber_seven004());
+		logic_list.add(new Regx_PhoneNumber_seven005());
 		logic_list.add(new Regx_PhoneNumber_seven006());
-//		logic_list.add(new Regx_PhoneNumber_seven007());
-//		logic_list.add(new Regx_PhoneNumber_seven008());
-//		logic_list.add(new Regx_PhoneNumber_seven009());
+		logic_list.add(new Regx_PhoneNumber_seven007());
+		logic_list.add(new Regx_PhoneNumber_seven008());
+		logic_list.add(new Regx_PhoneNumber_seven009());
 		logic_list.add(new Regx_PhoneNumber_seven010());
 
 		for (Super_Regx_PhoneNumber logic : logic_list) {

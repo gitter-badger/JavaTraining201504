@@ -9,7 +9,9 @@ public class Regx_PhoneNumber_seven005 extends Super_Regx_PhoneNumber {
 	@Override
 	public boolean execute(String input) {
 		// TODO 自動生成されたメソッド・スタブ
-		return false;
+		boolean ret;
+		ret = input.matches("[0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]");
+		return ret;
 	}
 
 }
