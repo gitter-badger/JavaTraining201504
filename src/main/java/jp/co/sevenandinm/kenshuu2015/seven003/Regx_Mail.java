@@ -14,9 +14,9 @@ public class Regx_Mail {
 		boolean isMailNo = my.execute(input);
 		my.dispOut(input,isMailNo);
 	}
-	private void dispOut(String input, boolean isTelNo) {
+	private void dispOut(String input, boolean isMailNo) {
 		// TODO 自動生成されたメソッド・スタブ
-		if(isTelNo){
+		if(isMailNo){
 			System.out.println("入力された< " + input + " >はメールアドレスとして正しいです。");
 		}else{
 			System.out.println("入力された< " + input + " >はメールアドレスではありません。");
